@@ -1,0 +1,27 @@
+const int IR_Sensor=2;
+
+void setup() {
+
+pinMode(13, OUTPUT);
+
+1/Pin 2 is connected to the output of IR_Sensor
+
+pinMode (IR_Sensor, INPUT);
+
+}
+
+void loop() {
+
+if(digitalRead(IR_Sensor)==HIGH) //Check the s
+
+digitalWrite(13, HIGH); // set the LED on
+
+else
+
+digitalWrite(13, LOW); // set the LED off
+
+// wait for a second
+
+delay(1000);
+
+}
