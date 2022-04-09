@@ -1,0 +1,19 @@
+void setup () { 
+
+ // initialize digital pin LED_BUILTIN as an output. 
+
+ Pin Mode (LED_BUILTIN, OUTPUT);
+
+}
+
+// the loop function runs over and over again forever
+
+void loop () {
+
+digital Write (LED_BUILTIN, HIGH); // turn the LED on
+
+delay (1000); // wait for a second
+
+digital Write (LED_BUILTIN, LOW); // turn the LED off
+
+delay (1000); // wait for a second
