@@ -1,0 +1,29 @@
+const int redLED = D3; //D3 of NMCU
+const int greenLED = D2; //D2 of NMCU
+const int blueLED = D1`; //D1 of NMCU
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(redLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  pinMode(blueLED, OUTPUT);
+
+  digitalWrite(redLED, 0);
+  digitalWrite(greenLED, 0);
+  digitalWrite(blueLED, 0);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(redLED, 1);
+  digitalWrite(greenLED, 0);
+  digitalWrite(blueLED, 0);
+  delay(200);
+  digitalWrite(redLED, 0);
+  digitalWrite(greenLED, 1);
+  digitalWrite(blueLED, 0);
+  delay(200);
+  digitalWrite(redLED, 0);
+  digitalWrite(greenLED, 0);
+  digitalWrite(blueLED, 1);
+  delay(200);
+}
