@@ -1,27 +1,19 @@
-const int IR_Sensor=2;
-
+int analogInPin =7 ;  // Analog input pin that the potentiometer is attached to
+// value read from the pot
+int sensorValue;
 void setup() {
-
-pinMode(13, OUTPUT);
-
-1/Pin 2 is connected to the output of IR_Sensor
-
-pinMode (IR_Sensor, INPUT);
-
+  // initialize serial communications at 9600 bps:
+  Serial.begin(9600);
+  pinMode(7,INPUT);
 }
-
+ 
 void loop() {
-
-if(digitalRead(IR_Sensor)==HIGH) //Check the s
-
-digitalWrite(13, HIGH); // set the LED on
-
-else
-
-digitalWrite(13, LOW); // set the LED off
-
-// wait for a second
-
-delay(1000);
-
+  // read the analog in value:
+  sensorValue = digitalRead(analogInPin);
+  if(sensorValue==0)
+   Serial.print("object is detected \n");
+   else
+   Serial.print("object is not detected \n");
+ 
+  delay(200);
 }
